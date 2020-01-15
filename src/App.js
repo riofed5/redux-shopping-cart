@@ -13,7 +13,6 @@ import PromoCodeDiscount from './components/PromoCode';
 
 import { handleChange } from './actions/promoCodeAction';
 
-
 class App extends Component {
   constructor(){
     super();
@@ -25,8 +24,9 @@ class App extends Component {
       disabledPromoButton: false,
     }
   }
-
+  
   giveDiscountHandler=()=>{
+    //Check the inputted promoCode.If true -> disable the button apply promoCode, else -> total price is NOT discounted
     if(this.props.promoCode ==="DISCOUNT"){
       this.setState({
         estimatedTotal: (this.state.estimatedTotal * 0.9)
@@ -66,6 +66,7 @@ class App extends Component {
   }
 }
 
+//Use redux to pass state, action to props => lately using as props.state... and props.handleChange
 const mapStateToProps=state=>({
   promoCode: state.promoCode.value
 })

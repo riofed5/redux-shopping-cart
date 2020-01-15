@@ -11,6 +11,7 @@ export default class ItemDetails extends Component {
     render() {
         return (
             <div>
+                {/* Button for hide or unhide item details */}
                 <Button
                     className="item-details-button"
                     variant="link"
@@ -19,6 +20,7 @@ export default class ItemDetails extends Component {
                     {this.state.open? 'Hide': 'See'} item details
                     {this.state.open? ` -` : ` +`}
                 </Button>
+                {/* Details of item */}
                 <Collapse in={this.state.open}>
                     <div className="media">
                         <Media>
@@ -44,7 +46,6 @@ export default class ItemDetails extends Component {
                             </Media.Body>
                         </Media>
                     </div>
-                    
                 </Collapse>
             </div>  
         )

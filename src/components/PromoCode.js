@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { handleChange } from '../actions/promoCodeAction';
 import {Button, Collapse, Media, Row, Col, FormGroup, FormControl, FormLabel, Form} from 'react-bootstrap';
 
+//UI for Promocode's details and Action for apply Promocode
 class PromoCodeDiscount extends Component {
     constructor(props){
         super(props);
@@ -61,6 +62,7 @@ class PromoCodeDiscount extends Component {
     }
 }
 
+//Use redux to pass state, action to props => lately using as props.state... and props.handleChange
 const mapStateToProps=state=>({
     promoCode: state.promoCode.value
 })

@@ -16,6 +16,7 @@ const applyPromoCodeReducer=(state= initalState, action )=>{
     }
 }
 
+//combine Reducer
 const reducer= combineReducers({
     promoCode: applyPromoCodeReducer
 });

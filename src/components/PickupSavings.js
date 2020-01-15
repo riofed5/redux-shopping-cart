@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Row, Col, Tooltip, OverlayTrigger} from 'react-bootstrap';
 
+//UI for pickupSaving price
+
 const PickupSavings =(props)=>{
     const tooltip=(
         <Tooltip id="tooltip">
